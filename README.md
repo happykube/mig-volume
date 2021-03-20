@@ -14,7 +14,7 @@ PV, PVC를 이관 테스트 하기 위한 sample입니다.
   - volume 디렉토리는 '/data'로 하십시오.  
 - [Dynamic provisioning](https://happycloud-lee.tistory.com/178?category=832243)을 참고하여 구성   
 - sample 다운로드   
-  - ssh sydney  
+  - ssh root@{sydney node ip} 
   - mkdir work
   - cd work
   - git clone https://github.com/happykube/mig-volume.git
