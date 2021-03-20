@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: product
+spec:
+  storageClassName: nfs-delete
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteMany
+  persistentVolumeReclaimPolicy: Delete
+  nfs:
+    server: 10.138.37.203
+    path: /data/product

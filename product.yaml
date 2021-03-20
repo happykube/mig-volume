@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: product
+spec:
+  selector:
+    matchLabels:
+      app: product
+  replicas: 2
+  template:
+    metadata:
+      name: product
+      labels:
+        app: product
+    spec:
+      containers:
+      - name: product
+        image: nginx
+        imagePullPolicy: IfNotPresent
+        ports:
+        - name: product
+          containerPort: 10001
+        volumeMounts:
+        - name: doc-home
+          mountPath: /usr/share/nginx/html
+      volumes:
+      - name: doc-home
+        persistentVolumeClaim:
+          claimName: product
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: product
+spec:
+  type: NodePort
+  selector:
+    app: product
+  ports:
+  - name: product
+    port: 8080
+    targetPort: 80
+    nodePort: 30000
+

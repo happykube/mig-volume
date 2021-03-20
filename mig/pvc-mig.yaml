@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  annotations:
+    volume.beta.kubernetes.io/storage-provisioner: standard
+  finalizers:
+  - kubernetes.io/pvc-protection
+  name: product
+  namespace: default
+spec:
+  accessModes:
+  - ReadWriteMany
+  resources:
+    requests:
+      storage: 1Gi
+  storageClassName: nfs-delete
+  volumeMode: Filesystem
+  volumeName: pvc-076a56ee-fa02-4cbf-aa22-cafa9d264dc9

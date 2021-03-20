@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: product
+spec:
+  storageClassName: nfs-retain
+  resources:
+    requests:
+      storage: 1Gi
+  accessModes:
+    - ReadWriteMany
+  selector:
+    matchLabels:
+      app: product
