@@ -7,7 +7,7 @@ PV, PVC를 이관 테스트 하기 위한 sample입니다.
   - As-Is cluster, As-Is NFS 
   - To-Be cluster, To-Be NFS
 - [minikube설치](https://happycloud-lee.tistory.com/20?category=832243)를 참조하여 minikube설치  
-- [ssh설정](https://happycloud-lee.tistory.com/145?category=893924)를 참고하여 ssh설정  
+- [ssh설정](https://happycloud-lee.tistory.com/145?category=893924)을 참고하여 ssh설정  
   - As-Is cluster: sydney, As-Is NFS: nfs-sydney
   - To-Be cluster: tokyo, To-Be NFS: nfs-tokyo
 - [NFS설치](https://happycloud-lee.tistory.com/46?category=832247)를 참고하여NFS를 설치   
