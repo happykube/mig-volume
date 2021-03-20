@@ -36,7 +36,7 @@ PV, PVC를 이관 테스트 하기 위한 sample입니다.
 - cd ~/work
 - ssh tokyo
 - mkdir work && exit 
-- scp -r ~/work tokyo:~/work
+- scp -r \~/work tokyo:\~/work
 - scp ./product/* nfs-tokyo:/data/default-product-{pvc volume}/
 - ssh tokyo && cd work
 - vi work/pv-mig.yaml 에서 nfs서버의 ip를 nfs-tokyo의 ip로 변경 
